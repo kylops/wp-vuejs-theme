@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+* {
+  box-sizing: border-box;
+}
+html {height: 100%;}
+body {
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
+}
+.welcome-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.welcome-slide {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%
+}
+#main-title{
+    font-size: 4em;
+    color: black;
+    // position: absolute;
+    text-align: center;
+    text-align: -webkit-center;
+
+    font-family: 'Gloria Hallelujah', cursive !important;
+}
+a{
+    text-decoration: none !important;
+    &:hover{
+        color: #092054;
+
+    }
+}
+#social-icon-list{
+    text-align: center;
+    .social-icon{
+        color: black;
+    }
+    // position: absolute;
+}
+@keyframes slide {
+100% {
+  opacity: 1;
+  transform: translateX(0);
+  }
+}
+.title-wrapper {
+  transform: translateX(-100px);
+  opacity: 0;
+  border: 2px solid white;
+  margin: 30vh auto 0;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+  max-width: 31em;
+  height: auto;
+  animation: slide 1s linear 3.2s;
+  animation-fill-mode: forwards;
+}
+// .title-wrapper h1 {
+//   font-family: 'Raleway', sans-serif;
+//   margin: 0;
+//   color: #ff6568;
+//   line-height: 1;
+//   letter-spacing: 2px;
+//   font-size: 2em;
+//   text-align: center;
+// }
+// .title-wrapper h1 span {
+//   font-size: 1.7em;
+//   color: #092054;
+//   display: block;
+//   border-bottom: 2px solid #092054;
+// }
+.inner {
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 25px 15px;
+  margin: 0 !important;
+}
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // animation: scale 10s 4.2s;
+  // animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    left: -60%;
+    width: 20%;
+    border-right: 30vw solid transparent;
+}
+50% {
+  left: 0;
+  width: 60%;
+  border-right: 5vw solid transparent;
+}
+100% {
+  left: 0;
+  width: 60%;
+  border-right: 20vw solid transparent;
+}
+}
+.overlay {
+  width: 60%;
+  position: absolute;
+  left: -60%;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  border-top-color: #092054;
+  border-right: 20vw solid transparent;
+  border-top-width: 100vh;
+  border-top-style: solid;
+  animation: move 1.5s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
+}
+@media (max-width: 768px) {
+  body {font-size: .8em}
+}

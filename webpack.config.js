@@ -12,14 +12,14 @@ var extractPlugin = new ExtractTextPlugin({
 module.exports = {
     entry: {
         // 'app': glob.sync('./assets/js/*.js'),
-        'main': path.join(__dirname, 'rest-theme', 'src', 'main.js'),
+        'main': path.join(__dirname, 'assets', 'js', 'main.js'),
 
 
     },
 
     output: {
-        path: path.join(__dirname, 'rest-theme', 'dist'),
-        filename: 'build.js'
+        path: path.join(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
     // externals: ['axios'],
     resolve: {
