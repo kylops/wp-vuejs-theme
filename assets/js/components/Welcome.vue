@@ -5,7 +5,7 @@
         <div class="slide">
             <div class="title-wrapper uk-animation-toggle">
                 <div class="inner uk-align-center uk-animation-shake">
-                    <router-link :to="{ path: 'blog' }">
+                    <router-link :to="{ path: '/' }">
                         <div id="main-title" class="uk-heading-primary uk-position-z-index" v-text="title"></div>
                     </router-link>
                     <!-- <div class="head-icon uk-width-medium-1-4 uk-width-small-1-2 uk-position-z-index">

@@ -59,10 +59,10 @@
     }
 
     // init Isotope
-    var $grid = $('.grid').isotope({
-      itemSelector: '.element-item',
-      layoutMode: 'masonry',
-    });
+    // var $grid = $('.grid').isotope({
+    //   itemSelector: '.element-item',
+    //   layoutMode: 'masonry',
+    // });
 </script>
 
 <style lang="css">

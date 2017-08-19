@@ -12,7 +12,7 @@ import store from './store.js';
 
 import router from './router.js';
 
-
+console.log('hello');
 // Axios Import
 import Axios from 'axios';
 Vue.use(Axios);
