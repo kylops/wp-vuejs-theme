@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Blog from './components/Blog.vue'
-import Welcome from './components/Welcome.vue'
+import Blog from './components/templates/Blog.vue'
+import Welcome from './components/templates/Welcome.vue'
+import SinglePost from './components/posts/SinglePost.vue'
 
 Vue.use(Router)
 
 const routes = [
     { path: '/', name: 'welcome', component: Welcome },
-
     { path: '/blog', name: 'blog',  component: Blog },
-
+    { path: '/blog/:slug', name: 'singlePost',  component: SinglePost },
 ]
 
 export default new Router({

@@ -1,5 +1,5 @@
 <template lang="html">
-    <div id="blog">
+    <div id="home">
         <site-header></site-header>
         <post-list></post-list>
     </div>
@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: 'Blog',
+        name: 'Home',
     }
 </script>
 

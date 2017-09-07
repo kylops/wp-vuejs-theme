@@ -1,7 +1,7 @@
 import '../scss/style.scss';
 import Vue from 'vue';
 import App from './App.vue';
-
+import $ from "jquery";
 
 // Vue Router
 import VueRouter from 'vue-router';
@@ -31,29 +31,38 @@ UIkit.use(Icons);
 // UIkit.notification('Hello world.');
 
 var Blog = Vue.component(
-    'Blog',
-    require('./components/Blog.vue')
+    'blog',
+    require('./components/templates/Blog.vue')
 );
 var Welcome = Vue.component(
-    'Welcome',
-    require('./components/Welcome.vue')
+    'welcome',
+    require('./components/templates/Welcome.vue')
 );
 var siteHeader = Vue.component(
     'site-header',
-    require('./components/_site-header.vue')
+    require('./components/glob/SiteHeader.vue')
 );
 var siteFooter = Vue.component(
     'site-footer',
-    require('./components/_site-footer.vue')
+    require('./components/glob/SiteFooter.vue')
 );
 var siteFooter = Vue.component(
     'site-nav',
-    require('./components/_site-nav.vue')
+    require('./components/glob/SiteNav.vue')
 );
 var postList = Vue.component(
     'post-list',
-    require('./components/_post-list.vue')
+    require('./components/posts/PostList.vue')
 );
+var postList = Vue.component(
+    'post-card',
+    require('./components/posts/PostCard.vue')
+);
+var postList = Vue.component(
+    'single-post',
+    require('./components/posts/SinglePost.vue')
+);
+
 
 
 

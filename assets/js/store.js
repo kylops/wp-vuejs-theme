@@ -70,7 +70,7 @@ const actions = {
             });
     },
     fetchAllPosts({commit, state}){
-        var posts = axios.get('/wp-json/wp/v2/posts??_embed&per_page=100')
+        var posts = axios.get('/wp-json/wp/v2/posts??_embed&per_page=10')
             .then(function (response) {
                 commit('updateAllPosts', response.data)  ;
             })

@@ -9,7 +9,7 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-iconnav">
                     <li>
-                        <router-link :to="{ path: '/' }">
+                        <router-link :to="{ path: '/home' }">
                             <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
                             Home
                         </router-link>
@@ -58,8 +58,27 @@
         }
     }
 </script>
-<style lang="css">
+<style lang="css" scoped>
 nav{
     position:fixed;
+    .uk-navbar-item {
+        color: white !important;
+    }
+}
+.uk-container{
+    background: #333;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    /*width: 100%;*/
+    /*min-width: 1024px;*/
+    height: 48px;
+    max-height: 44px;
+    font-size: 17px;
 }
 </style>
