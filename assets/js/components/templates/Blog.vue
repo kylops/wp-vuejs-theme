@@ -1,6 +1,5 @@
 <template lang="html">
     <div id="home">
-        <site-header></site-header>
         <post-list></post-list>
     </div>
 

@@ -1,6 +1,6 @@
 <template lang="html">
 
-    <header id="site-header" class="dbr-hero-header uk-block uk-block-large uk-background-cover uk-flex uk-flex-middle uk-height-viewport uk-contrast">
+    <!-- <header id="site-header" class="dbr-hero-header uk-block uk-block-large uk-background-cover uk-flex uk-flex-middle uk-height-viewport uk-contrast">
        <div class="uk-container uk-container-center">
           <section class="uk-grid uk-grid-match" data-uk-grid-margin="">
              <div class="uk-width-medium-1-1">
@@ -12,7 +12,30 @@
              </div>
           </section>
        </div>
+    </header> -->
+    <header>
+      <v-parallax src="assets/hero.jpeg" height="300">
+        <v-layout
+          column
+          align-center
+          justify-center
+          class="white--text"
+        >
+          <img src="https://unsplash.it/1920/1080/?random" alt="header-bg">
+          <h1 class="white--text mb-2 display-3">Parallax Template</h1>
+          <div class="headline mb-3 text-xs-center">Lorem ipsum dolor</div>
+          <v-btn
+            class="blue lighten-2 mt-5"
+            dark
+            large
+            href="/pre-made-themes"
+          >
+            Get Started
+          </v-btn>
+        </v-layout>
+      </v-parallax>
     </header>
+
 </template>
 
 <script>

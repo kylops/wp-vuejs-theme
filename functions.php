@@ -5,6 +5,7 @@
  * @since Third Wunder 2017
  */
 
+add_filter( 'allowed_http_origin', '__return_true' );
 add_theme_support( 'post-thumbnails' );
 
 /**

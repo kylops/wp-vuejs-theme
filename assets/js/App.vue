@@ -1,5 +1,5 @@
 <template>
-<div id="app-vue">
+<v-app light>
   <div id="page" class="site">
     <site-nav v-if="showNav"></site-nav>
 
@@ -7,7 +7,7 @@
 
     <site-footer v-if="showNav"></site-footer>
   </div><!-- #page .site -->
-</div><!-- #app -->
+</v-app><!-- #app -->
 </template>
 
 <script>

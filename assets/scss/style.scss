@@ -14,7 +14,8 @@ $global-link-color: #DA7D02;
 
 // 4. Import UIkit.
 @import "node_modules/uikit/src/scss/uikit-theme.scss";
-
+@import "/Users/Kyle/Sites/vv3schools/wp-content/themes/wp-vuejs-theme/node_modules/vuetify/dist/vuetify.min.css";
+// @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons";
 html, body{
     background-color: $background-color;
     color: $text-color;

@@ -1,34 +1,15 @@
 <template lang="html">
-    <div id="social-footer" class="uk-section-secondary uk-padding-remove">
-    <div class="uk-navbar-center">
-    <ul id="social-footer-icon-list" class="uk-navbar-nav">
-      <li>
-        <a href="#">
-          <span uk-icon="icon: github; ratio: 2"></span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span uk-icon="icon: facebook; ratio: 2"></span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span uk-icon="icon: twitter; ratio: 2"></span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span uk-icon="icon: instagram; ratio: 2"></span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span uk-icon="icon: google; ratio: 2"></span>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <div id="social-footer" class="uk-section-secondary uk-padding-remove">
+    <v-footer class="blue darken-2">
+      <v-layout row wrap align-center>
+        <v-flex xs12>
+          <div class="white--text ml-3">
+            <v-icon class="red--text">favorite</v-icon>
+            <a class="white--text" href="mailto:kyle.yangliu@gmail.com">kylops</a>
+          </div>
+        </v-flex>
+      </v-layout>
+    </v-footer>
   </div>
 </template>
 
