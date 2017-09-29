@@ -14,24 +14,23 @@
        </div>
     </header> -->
     <header>
-      <v-parallax src="assets/hero.jpeg" height="300">
+      <v-parallax src="https://unsplash.it/1920/1080/?random" height="700" jumbotron>
         <v-layout
           column
           align-center
           justify-center
           class="white--text"
         >
-          <img src="https://unsplash.it/1920/1080/?random" alt="header-bg">
-          <h1 class="white--text mb-2 display-3">Parallax Template</h1>
-          <div class="headline mb-3 text-xs-center">Lorem ipsum dolor</div>
-          <v-btn
-            class="blue lighten-2 mt-5"
-            dark
-            large
-            href="/pre-made-themes"
-          >
-            Get Started
-          </v-btn>
+          <img src="" alt="">
+          <h1 class="white--text mb-2 display-3">See Amazing</h1>
+          <div class="headline mb-3 text-xs-center"> </div>
+          	<a class="scroll-btn" href="#main-content" uk-scroll>
+          		<span class="mouse">
+          			<span>
+          			</span>
+          		</span>
+          	</a>
+            <p>scroll down</p>
         </v-layout>
       </v-parallax>
     </header>
@@ -59,6 +58,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1{
+  text-align: center;
+  text-shadow: 2px 2px 8px #c4c4c4;
+}
+.headline{
+    margin-bottom: 10% !important;
+}
 // #header-title{
 //     color: white;
 // }
@@ -108,7 +114,7 @@ header {
 			display: inline-block;
 			height: 55px;
 			padding:0px 40px;
-			background: #f7b243;
+			background: transparent;
 			border: 0;
 			border-radius: 5px;
 			color: white;
@@ -122,12 +128,120 @@ header {
 			transition: background 0.6s;
 		}
 		&:hover {
-			$hero-rgba-color: rgba(red(#f7b243), green(#f7b243), blue(#f7b243), 0.5);
-			background-color: $hero-rgba-color;
 			text-decoration: none;
 		}
 	}
 }
 
+@-webkit-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+@-moz-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+@keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+ .scroll-btn {
+	display: block;
+	position: relative;
+	left: 0;
+	right: 0;
+  bottom: 0;
+	text-align: center;
+}
+.scroll-btn > * {
+	display: inline-block;
+	line-height: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #7f8c8d;
+	color: #ffffff;
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+	color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.scroll-btn .mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 55px;
+	margin: 0 auto 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid white;
+	border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+	position: absolute;
+	display: block;
+	top: 29%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: white;
+	border-radius: 50%;
+	-webkit-animation: ani-mouse 2.5s linear infinite;
+	-moz-animation: ani-mouse 2.5s linear infinite;
+	animation: ani-mouse 2.5s linear infinite;
+}
 /* HERO HEADER */
 </style>

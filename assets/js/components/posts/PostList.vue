@@ -6,34 +6,37 @@
             </div>
         </div>
     </div> -->
-    <v-layout
-      column
-      wrap
-      class="my-5"
-      align-center
-    >
-      <v-flex xs12 sm4 class="my-3">
-        <div class="text-xs-center">
-          <h2 class="headline">The best way to start developing</h2>
-          <span class="subheading">
-            Cras facilisis mi vitae nunc
-          </span>
-        </div>
-      </v-flex>
-      <v-flex xs12>
-        <v-container grid-list-xl>
+<v-container>
+  <v-layout
+    column
+    wrap
+    class="my-5"
+    align-center
+  >
+    <v-flex xs12 sm4 class="my-3">
+      <div class="text-xs-center">
+        <h2 class="headline">The best way to start developing</h2>
+        <span class="subheading">
+        </span>
+      </div>
+    </v-flex>
+    <v-flex xs12>
+      <v-container grid-list-xl>
 
-          <v-layout row wrap align-center>
-            <v-flex xs12 md5 offset-md2>
-               <div v-for="post in posts" :key="post.title.rendered">
-                 <post-card :post="post"></post-card>
-               </div>
-            </v-flex>
+        <v-layout row wrap align-center>
+             <div class="card-content-container" v-for="post in posts" :key="post.title.rendered">
+               <v-flex xs12 md12>
 
-          </v-layout>
-        </v-container>
-      </v-flex>
-    </v-layout>
+               <post-card :post="post"></post-card>
+             </v-flex>
+
+             </div>
+
+        </v-layout>
+      </v-container>
+    </v-flex>
+  </v-layout>
+</v-container>
 
 </template>
 
@@ -46,7 +49,7 @@
         // },
         data() {
           return {
-            base_path: wp.base_path
+            // base_path: wp.base_path
           }
         },
 
@@ -80,4 +83,7 @@
 </script>
 
 <style lang="css">
+.card-content-container{
+  width: 100%;
+}
 </style>

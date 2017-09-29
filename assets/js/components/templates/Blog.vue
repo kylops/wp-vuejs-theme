@@ -1,8 +1,7 @@
 <template lang="html">
-    <div id="home">
-        <post-list></post-list>
-    </div>
-
+  <div id="post-list" class="">
+    <post-list></post-list>
+  </div>
 </template>
 
 <script>

@@ -1,8 +1,14 @@
 <template>
-  <v-toolbar class="white" id="site-nav">
-    <v-toolbar-title v-text="title"></v-toolbar-title>
-  </v-toolbar>
-
+  <v-toolbar fixed>
+      <v-toolbar-title>{{title}}</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <!-- <v-btn flat ripple to="/">Home</v-btn> -->
+        <v-btn flat ripple to="/blog">My Blog</v-btn>
+        <v-btn flat ripple to="/about">About me</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
 </template>
 
 <script>

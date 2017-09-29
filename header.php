@@ -14,11 +14,15 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
    <div id="page" class="site">
 

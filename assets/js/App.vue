@@ -1,18 +1,17 @@
 <template>
-<v-app light>
-  <div id="page" class="site">
-    <site-nav v-if="showNav"></site-nav>
-
-      <router-view></router-view>
-
-    <site-footer v-if="showNav"></site-footer>
-  </div><!-- #page .site -->
-</v-app><!-- #app -->
+  <div id="app-container" class="">
+    <full-width-layout></full-width-layout>
+    <floating-cta></floating-cta>
+  </div>
 </template>
 
 <script>
+import FullWidthLayout from './components/templates/FullWidthLayout.vue'
 export default {
   name: 'app',
+  components: {
+    'full-width-layout': FullWidthLayout
+  },
   props : {
     //siteTitle : '',
   },
@@ -22,12 +21,6 @@ export default {
     }
   },
   created : function(){
-      this.$store.dispatch('fetchSiteInfo');
-      this.$store.dispatch('fetchAllPages');
-      this.$store.dispatch('fetchAllPosts');
-      this.$store.dispatch('fetchAllCategories');
-      this.$store.dispatch('fetchAllTags');
-      console.log(this.$route.name);
   },
   mounted : function(){
   },
@@ -35,24 +28,9 @@ export default {
 
   },
   computed : {
-    siteInfo : function(){
-      return this.$store.getters.getSiteInfo;
-  },
-    showNav: function(){
-       if(this.$route.name == 'welcome'){
-          return this.showNavValue = false;
-       }else{
-          return this.showNavValue = true;
-       }
-
-     }
-
   }
 }
 </script>
 
 <style scoped>
-#app {
-
-}
 </style>

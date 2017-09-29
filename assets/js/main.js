@@ -57,13 +57,17 @@ var postList = Vue.component(
     'post-list',
     require('./components/posts/PostList.vue')
 )
-var postList = Vue.component(
+var postCard = Vue.component(
     'post-card',
     require('./components/posts/PostCard.vue')
 )
-var postList = Vue.component(
+var singlePost = Vue.component(
     'single-post',
     require('./components/posts/SinglePost.vue')
+)
+var floatingCTA = Vue.component(
+    'floating-cta',
+    require('./components/glob/FloatingCTA.vue')
 )
 
 

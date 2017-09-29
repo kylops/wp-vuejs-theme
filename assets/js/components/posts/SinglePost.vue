@@ -1,28 +1,24 @@
 <template lang="html">
 
-  <article v-if="singlePost" class="uk-article uk-margin-bottom" itemscope itemtype="http://schema.org/Article">
+  <article class="uk-article uk-margin-bottom" itemscope itemtype="http://schema.org/Article">
     <header id="site-header" class="">
-      <div>
-          <div class="uk-inline">
-              <div class="uk-inline-clip uk-transition-toggle">
-                  <img src="https://unsplash.it/1920/1080/?random" alt="">
-                  <img class="uk-transition-scale-up uk-position-cover" src="https://unsplash.it/1920/1080/?random" alt="">
-              </div>
-              <div class="uk-position-center">
-                  <h1 class="uk-heading-primary" v-text="singlePost.title.rendered">Heading</h1>
-              </div>
+      <div class="uk-inline">
+          <div class="uk-inline-clip uk-transition-toggle">
+              <img src="https://unsplash.it/1920/1080/?random" alt="" class="">
+              <img class="uk-transition-scale-up uk-position-cover" src="https://unsplash.it/1920/1080/?random" alt="">
           </div>
-
-
+          <div class="uk-position-center">
+              <h1 class="uk-heading-primary post-heading" v-text="singlePost.title.rendered"></h1>
+          </div>
       </div>
+
     </header>
-    <div  class="main-content uk-container uk-margin-xlarge">
+
+    <div  class="main-content uk-container uk-margin-large">
 
             <p class="uk-article-meta">Written by <a href="#">Super User</a> on {{formatDate(singlePost.date)}}</p>
 
-            <p class="uk-text-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-
-            <p v-html="singlePost.content.rendered"></p>
+            <p v-html="singlePost.content.rendered" class=""></p>
 
             <div class="uk-grid-small uk-child-width-auto" uk-grid>
                 <div>
@@ -111,11 +107,15 @@ export default {
 
 <style lang="css" scoped>
   .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s
+    transition: opacity .5s;
   }
   .fade-enter, .fade-leave-to { /* .fade-leave-active in <2.1.8 */
-    opacity: 0
+    opacity: 0;
   }
   .post-header{
+  }
+  .post-heading{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
   }
 </style>
